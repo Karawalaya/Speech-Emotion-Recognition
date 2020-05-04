@@ -56,7 +56,7 @@ df1 = ca.assign_classes(df1)
 
 # pc.emotion_distribution_bar_plot(df1)
 # pc.emotion_distribution_pie_plot(df1)     # check for the clean directory as well
-#
+
 # da.visual_analysis(df1, envelope=False)
 # da.visual_analysis(df1, envelope=True)
 
@@ -80,6 +80,7 @@ model.save(mconf.model_path)
 
 vp.verification_predict(df1)
 
+################################################################
 p_path = os.path.join('pickles', 'convolutional.p')
 with open(p_path, 'rb') as handle:
     modelconfig = pickle.load(handle)
@@ -87,4 +88,3 @@ with open(p_path, 'rb') as handle:
 loaded_model = load_model(modelconfig.model_path)
 classes = list(np.unique(df1.emotion_label))
 p.predict(modelconfig, loaded_model, classes)
-

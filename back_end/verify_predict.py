@@ -58,8 +58,6 @@ def build_predictions(classes, fname_to_class, modelconfig, model):
 
             if modelconfig.mode == 'convolutional':
                 x = x.reshape(1, x.shape[0], x.shape[1], 1)
-            elif modelconfig.mode == 'time':
-                x = np.expand_dims(x, axis=0)
             y_hat = model.predict(x)
             y_prob.append(y_hat)
             y_pred.append(np.argmax(y_hat))

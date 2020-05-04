@@ -7,10 +7,10 @@ import numpy as np
 
 
 def predict(modelconfig, load_model, classes):
-    aud_fl_list_recorded = os.listdir(gconf.test_dir)
+    aud_fl_list_recorded = os.listdir(gconf.uploads_dir)
     aud_fl_list_recorded.sort()
     file = aud_fl_list_recorded[-1]
-    signal, rate = librosa.load(os.path.join(gconf.test_dir, file), sr=16000)
+    signal, rate = librosa.load(os.path.join(gconf.uploads_dir, file), sr=16000)
 
     mask = calc.envelope(signal, rate, 0.0005)
     signal = signal[mask]

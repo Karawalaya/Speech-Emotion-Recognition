@@ -68,8 +68,7 @@ def build_rand_feat(randfeatparams, modelconfig):
         X = X.reshape(X.shape[0], X.shape[1], X.shape[2], 1)    #  X [no_samples, 13 ,9 ,1]
         print("^^^^^^^^^^      ", X.shape)
         print("^^^^^^^^^^ Should be similar to no of samples     ", X.shape[0])
-    elif modelconfig.mode == 'recurrent':
-        X = X.reshape(X.shape[0], X.shape[1], X.shape[2])
+
     y = to_categorical(y, num_classes=len(classes))
 
     modelconfig.features = (X, y)   # python allows you to add new fields to the objects on the fly.

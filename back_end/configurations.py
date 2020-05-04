@@ -3,10 +3,11 @@ import back_end.data_loading as dl
 import numpy as np
 
 
-smpl_data_path_RAVDESS = '../Resources/Datasets/RAVDESS_Audio/'
+smpl_data_path_RAVDESS = '../../Resources/Datasets/RAVDESS_Audio/'
 actr_dir_list_RAVDESS = os.listdir(smpl_data_path_RAVDESS)
 clean_dir = 'clean'
-test_dir = 'test'
+tmp_test_dir = 'test'
+uploads_dir = '../front_end/uploads'
 
 
 class ModelConfig:

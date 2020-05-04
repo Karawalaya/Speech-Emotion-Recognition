@@ -9,7 +9,7 @@ import back_end.predict as p
 
 app = Flask(__name__)
 
-uploads_dir = 'test'
+uploads_dir = 'uploads'
 
 @app.route('/')
 def home():
@@ -24,16 +24,12 @@ def upload_file():
 
 @app.route('/predict',methods=['GET'])
 def predict():
-    '''
-    For rendering results on HTML GUI
-    '''
-
-    p_path = os.path.join('pickles', 'convolutional.p')
+    p_path = os.path.join('../back_end/pickles', 'convolutional.p')
     with open(p_path, 'rb') as handle:
         modelconfig = pickle.load(handle)
 
     print(modelconfig.model_path)
-    loaded_model = load_model('models/convolutional.model')
+    loaded_model = load_model('../back_end/models/convolutional.model')
     print(loaded_model)
     classes = ['male_negative', 'male_positive']
     p.predict(modelconfig, loaded_model, classes)
@@ -41,20 +37,7 @@ def predict():
 
     output = prediction
 
-    return render_template('upload.html', prediction_text='Emotion $ {}'.format(output))
-
-# @app.route('/predict_api',methods=['POST'])
-# def predict_api():
-#     '''
-#     For direct API calls trought request
-#     '''
-#     data = request.get_json(force=True)
-#     prediction = model.predict([np.array(list(data.values()))])
-#
-#     output = prediction[0]
-#     return jsonify(output)
-
-
+    return render_template('upload.html', prediction_text='Emotion should be {}'.format(output))
 
 if __name__ == "__main__":
     app.run(debug=True)
