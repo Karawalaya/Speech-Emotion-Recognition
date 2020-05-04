@@ -33,7 +33,7 @@ def plot_single_audio_fft(signal, rate, type=1):
         fig, ax = plt.subplots()
         ax.plot(xf, 2.0 / n * np.abs(yf[:n // 2]))
         plt.grid()
-        plt.xlabel("Frequency -->")
+        plt.xlabel("Frequency")
         plt.ylabel("Magnitude")
 
     elif type == 2:
