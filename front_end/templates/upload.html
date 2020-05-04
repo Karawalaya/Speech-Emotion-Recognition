@@ -1,16 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Title</title>
-    </head>
-    <body>
-        <form action = "http://localhost:5000/uploader" method = "POST" enctype = "multipart/form-data">
-            <input type = "file" name = "file" />
-            <input type = "submit"/>
-        </form>
-        <br>
-        <br>
-        {{ prediction_text }}
-    </body>
+<!DOCTYPE HTML>
+<!--
+	Visualize by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Visualize by TEMPLATED</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.poptrox.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/main.js"></script>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<span class="avatar"><img src="images/avatar.jpg" alt="" /></span>
+						<h1>Get a hold of your <strong>Emotions</strong>, click the below button and upload an audio file<br />
+						to find whether your emotions are positive or negative.</h1>
+					</header>
+
+				    <form action = "http://localhost:5000/uploader" method = "POST" enctype = "multipart/form-data">
+						<input type = "file" name = "file" />
+						<input type = "submit"/>
+        			</form>
+					<br>
+					<br>
+					{{ prediction_text }}
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p>&copy; Untitled. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>. Demo Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+					</footer>
+
+			</div>
+
+
+
+	</body>
 </html>
