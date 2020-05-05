@@ -1,0 +1,14 @@
+https://medium.com/@SeoJaeDuk/automatic-speech-emotion-recognition-using-machine-learning-f324dd414ea4
+https://www.intechopen.com/books/social-media-and-machine-learning/automatic-speech-emotion-recognition-using-machine-learning
+https://github.com/MITESHPUTHRANNEU/Speech-Emotion-Analyzer
+https://towardsdatascience.com/speech-emotion-recognition-with-convolution-neural-network-1e6bb7130ce3
+https://medium.com/analytics-vidhya/tackle-almost-any-audio-classification-challenge-with-this-34a1d0ac82b9
+http://practicalcryptography.com/miscellaneous/machine-learning/guide-mel-frequency-cepstral-coefficients-mfccs/
+https://towardsdatascience.com/understanding-audio-data-fourier-transform-fft-spectrogram-and-speech-recognition-a4072d228520
+https://medium.com/prathena/the-dummys-guide-to-mfcc-aceab2450fd
+https://medium.com/@LeonFedden/comparative-audio-analysis-with-wavenet-mfccs-umap-t-sne-and-pca-cb8237bfce2f
+https://haythamfayek.com/2016/04/21/speech-processing-for-machine-learning.html
+http://datagenetics.com/blog/november32012/index.html
+https://www.youtube.com/user/seth8141/videos
+https://www.researchgate.net/post/What_is_Mfcc_and_how_to_know_which_part_of_signal_mfc_coefficient_are_important_to_train_a_neural_network_model
+https://zenodo.org/record/1188976#.XrAAEqgzbIX
