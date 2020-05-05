@@ -60,6 +60,7 @@ def build_rand_feat(randfeatparams, modelconfig):
     modelconfig.min = _min
     modelconfig.max = _max
     X, y = np.array(X), np.array(y)
+    print("@@@@@@@@   y-- ", y)
     print("@@@@@@@    ", X.shape)
     X = (X - _min) / (_max - _min)
     print("#########   ", X.shape)

@@ -29,12 +29,12 @@ def verification_predict(df):
         y_prob = fn_prob[row.audio_fname]
         y_probs.append(y_prob)
         for c, p in zip(classes, y_prob):
-            df.at[i, c] = p
+            df1.at[i, c] = p
 
     y_pred = [classes[np.argmax(y)] for y in y_probs]
-    df['y_pred'] = y_pred
+    df1['y_pred'] = y_pred
 
-    df.to_csv('predictions.csv', index=False)
+    df1.to_csv('predictions.csv', index=False)
 
 
 def build_predictions(classes, fname_to_class, modelconfig, model):
@@ -59,11 +59,15 @@ def build_predictions(classes, fname_to_class, modelconfig, model):
             if modelconfig.mode == 'convolutional':
                 x = x.reshape(1, x.shape[0], x.shape[1], 1)
             y_hat = model.predict(x)
+            # print(y_hat)
             y_prob.append(y_hat)
+            # print(y_prob)
             y_pred.append(np.argmax(y_hat))
+            # print(y_pred)
             y_true.append(c)
+            # print(y_true)
 
         fn_prob[aud_fl] = np.mean(y_prob, axis=0).flatten()
-        print("#####################@@@@@: ", fn_prob[aud_fl])
+        # print("#####################@@@@@: ", fn_prob[aud_fl])
 
     return y_true, y_pred, fn_prob

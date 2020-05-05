@@ -23,11 +23,12 @@ pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
 pd.set_option('display.max_colwidth', None)
 
-data_info_df = dl.load_data_intel(fromwhere='original')
-print(len(data_info_df))
-print(data_info_df.head())
-'''
-signal, rate = librosa.load(data_info_df.audio_file_path[500], sr=None)
+data_info_df = dl.load_data_intel(fromwhere='clean')
+# print(len(data_info_df))
+# print(data_info_df.head())
+
+# signal, rate = librosa.load(data_info_df.audio_file_path[500], sr=None)
+# print(rate)
 # print(data_info_df.audio_file_path[500])
 # print(signal.ndim)
 # print(signal.shape)
@@ -35,10 +36,10 @@ signal, rate = librosa.load(data_info_df.audio_file_path[500], sr=None)
 # print(signal.shape[0]/rate)
 # print(signal)
 
-pc.plot_single_audio_wave(signal)
-pc.plot_single_audio_amplitude(signal, rate)
-pc.plot_single_audio_fft(signal, rate)
-plt.show()
+# pc.plot_single_audio_wave(signal)
+# pc.plot_single_audio_amplitude(signal, rate)
+# pc.plot_single_audio_fft(signal, rate)
+# plt.show()
 
 # rate, signal = wavfile.read(data_info_df.audio_file_path[0])
 # print(rate)
@@ -58,7 +59,7 @@ df1 = ca.assign_classes(df1)
 # pc.emotion_distribution_bar_plot(df1)
 # pc.emotion_distribution_pie_plot(df1)     # check for the clean directory as well
 
-da.visual_analysis(df1, envelope=False)
+# da.visual_analysis(df1, envelope=False)
 # da.visual_analysis(df1, envelope=True)
 
 # dc.data_cleaning(df1)
@@ -89,5 +90,3 @@ with open(p_path, 'rb') as handle:
 loaded_model = load_model(modelconfig.model_path)
 classes = list(np.unique(df1.emotion_label))
 p.predict(modelconfig, loaded_model, classes)
-
-'''
