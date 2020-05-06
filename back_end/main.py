@@ -23,7 +23,7 @@ pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
 pd.set_option('display.max_colwidth', None)
 
-data_info_df = dl.load_data_intel(fromwhere='clean')
+data_info_df = dl.load_data_intel(fromwhere='original')
 # print(len(data_info_df))
 # print(data_info_df.head())
 
@@ -62,7 +62,7 @@ df1 = ca.assign_classes(df1)
 # da.visual_analysis(df1, envelope=False)
 # da.visual_analysis(df1, envelope=True)
 
-# dc.data_cleaning(df1)
+dc.data_cleaning(df1)
 
 mconf = conf.ModelConfig(mode='convolutional')
 rfpconf = conf.RandFeatParams(df1)
