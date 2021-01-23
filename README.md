@@ -1,4 +1,5 @@
-# mlcs-speech_emotion_recognition
+# Speech Eemotion Recognition
+
 A project on speech emotion recognition
 
 This project was developed with PyCharm as the IDE.
