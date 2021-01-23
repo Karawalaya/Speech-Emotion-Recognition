@@ -1,4 +1,4 @@
-# Speech Eemotion Recognition
+# Speech Emotion Recognition
 
 A project on speech emotion recognition
 
